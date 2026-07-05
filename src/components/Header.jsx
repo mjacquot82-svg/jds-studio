@@ -1,5 +1,11 @@
 import React from 'react';
-import { navItems } from '../data/siteContent.js';
+
+const heroNavItems = [
+  { label: 'Solutions', href: '#solutions' },
+  { label: 'Process', href: '#about' },
+  { label: 'About', href: '#about' },
+  { label: 'Contact', href: '#contact' },
+];
 
 function Header() {
   return (
@@ -14,7 +20,7 @@ function Header() {
         />
       </a>
       <nav className="nav-links" aria-label="Main menu">
-        {navItems.map((item) => (
+        {heroNavItems.map((item) => (
           <a key={item.href} href={item.href}>
             {item.label}
           </a>
