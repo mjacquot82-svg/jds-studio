@@ -18,6 +18,7 @@ function Header() {
           width="1536"
           height="1024"
         />
+        <span className="brand-tagline">Custom Software. Real Solutions.</span>
       </a>
       <nav className="nav-links" aria-label="Main menu">
         {heroNavItems.map((item) => (
