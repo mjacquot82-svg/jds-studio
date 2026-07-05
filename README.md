@@ -1,6 +1,6 @@
-# JDS Studio
+# Jacquot Digital Solutions
 
-Production-ready React + Vite website for JDS Studio, the custom business software practice of Jacquot Digital Solutions in Walkerton, Ontario.
+Production-ready React + Vite website for Jacquot Digital Solutions, a custom business software company in Walkerton, Ontario.
 
 ## What is included
 

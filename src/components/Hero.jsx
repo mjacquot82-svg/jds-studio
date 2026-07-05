@@ -5,16 +5,16 @@ function Hero() {
         <p className="eyebrow">Custom software for small businesses</p>
         <h1>Custom Software Built Around Your Business</h1>
         <p className="hero-subtitle">
-          Every business works differently. JDS Studio designs custom software, websites,
-          portals, and mobile apps that are built specifically around the way your business
-          operates.
+          Every business operates differently. Jacquot Digital Solutions designs custom
+          software, business systems, customer portals, websites and mobile apps that are built
+          specifically around the way your business works.
         </p>
         <div className="hero-actions" aria-label="Primary actions">
           <a className="button button-primary" href="#contact">
             Book a Consultation
           </a>
-          <a className="button button-secondary" href="#featured-project">
-            View Our Work
+          <a className="button button-secondary" href="#services">
+            View Our Services
           </a>
         </div>
       </div>
