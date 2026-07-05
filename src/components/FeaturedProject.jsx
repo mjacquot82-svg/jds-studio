@@ -1,3 +1,4 @@
+import React from 'react';
 import SectionHeader from './SectionHeader.jsx';
 
 function FeaturedProject() {

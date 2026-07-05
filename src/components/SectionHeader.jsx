@@ -1,3 +1,5 @@
+import React from 'react';
+
 function SectionHeader({ eyebrow, title, children, align = 'left' }) {
   return (
     <div className={`section-header ${align === 'center' ? 'section-header--center' : ''}`}>
