@@ -5,7 +5,7 @@ function Footer() {
     <footer className="site-footer">
       <div className="footer-brand">
         <img
-          src="/JDSlogo.png"
+          src="/assets/clearjds.png"
           alt="Jacquot Digital Solutions"
           width="1536"
           height="1024"
