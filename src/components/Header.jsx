@@ -13,7 +13,7 @@ function Header() {
       <a className="brand" href="#home" aria-label="Jacquot Digital Solutions home">
         <img
           className="brand-logo"
-          src="/assets/clearjds.png"
+          src="/assets/jdsbanner.png"
           alt="Jacquot Digital Solutions"
           width="1536"
           height="1024"
