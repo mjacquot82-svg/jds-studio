@@ -9,7 +9,7 @@ function FeaturedProject() {
           refrigerator magnets using their own photos before placing an order.
         </SectionHeader>
         <div className="project-panel" aria-label="Project workflow preview">
-          <div className="project-toolbar">
+          <div className="project-toolbar" aria-hidden="true">
             <span></span>
             <span></span>
             <span></span>

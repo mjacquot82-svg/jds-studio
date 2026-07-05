@@ -1,6 +1,6 @@
 # Jacquot Digital Solutions
 
-Production-ready React + Vite website for Jacquot Digital Solutions, a custom business software company in Walkerton, Ontario.
+Production-ready React + Vite website for Jacquot Digital Solutions, a custom business software company in Walkerton, Ontario. The visual direction is premium, minimal, technology-focused, and built around a dark navy, white, and electric blue brand system.
 
 ## What is included
 
@@ -11,6 +11,7 @@ Production-ready React + Vite website for Jacquot Digital Solutions, a custom bu
 - SEO metadata, Open Graph tags, structured data, robots file, and sitemap
 - Modern CSS with performance-friendly animations
 - Contact form markup ready to connect to a backend or form provider
+- Optimized WebP hero image with PNG fallback
 
 ## Local development
 
