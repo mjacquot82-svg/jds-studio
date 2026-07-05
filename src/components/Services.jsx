@@ -6,10 +6,10 @@ function Services() {
     <section id="services" className="section section-shell">
       <SectionHeader
         eyebrow="Services"
-        title="Software services for real business operations"
+        title="Software services for smarter small businesses"
       >
-        From first customer touchpoint to back-office workflow, JDS Studio builds practical
-        systems that reduce manual work and make the business easier to run.
+        From customer-facing portals to internal management systems, Jacquot Digital Solutions
+        builds practical software that saves time and supports the way your business already works.
       </SectionHeader>
       <div className="card-grid service-grid">
         {services.map((service, index) => (

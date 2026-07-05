@@ -6,9 +6,9 @@ function Solutions() {
     <section id="solutions" className="section section-shell solutions-section">
       <SectionHeader
         eyebrow="Solutions"
-        title="Business problems first, technology second"
+        title="Built around the problems that slow businesses down"
       >
-        The right software starts by understanding where time is lost, where customers wait,
+        The right system starts by understanding where work gets delayed, where customers wait,
         and where information falls through the cracks.
       </SectionHeader>
       <div className="solution-list">

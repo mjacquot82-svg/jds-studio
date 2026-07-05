@@ -7,18 +7,17 @@ function About() {
       <div className="about-layout">
         <div className="about-copy reveal">
           <SectionHeader eyebrow="About" title="Built by Marc Jacquot in Walkerton, Ontario">
-            JDS Studio is the software practice of Marc Jacquot, operating as Jacquot Digital
-            Solutions. The studio focuses on building software around a business instead of
-            forcing the business to change how it works.
+            Jacquot Digital Solutions is owned by Marc Jacquot and focused on custom software
+            for small businesses that need systems built around the way they actually operate.
           </SectionHeader>
           <p>
-            That means understanding the real workflow first: how customers arrive, how work
-            is approved, how teams communicate, how orders move, and where manual steps slow
-            the business down. The result is software that fits the operation and gives owners
-            clearer control.
+            Every business is unique. Off-the-shelf software often forces teams to change their
+            workflow to fit the tool. Jacquot Digital Solutions starts with the client&apos;s existing
+            process, then designs software around the workflow, customers, staff, approvals, and
+            decisions that already drive the business.
           </p>
         </div>
-        <div className="process-list reveal reveal-delay" aria-label="JDS Studio process">
+        <div className="process-list reveal reveal-delay" aria-label="Jacquot Digital Solutions process">
           {processSteps.map((step, index) => (
             <article key={step.title} className="process-step">
               <span>{String(index + 1).padStart(2, '0')}</span>

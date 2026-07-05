@@ -6,13 +6,13 @@ function Contact() {
       <div className="contact-layout">
         <div className="contact-copy reveal">
           <SectionHeader eyebrow="Contact" title="Start with the workflow you want to improve">
-            Tell JDS Studio what your business needs to run more smoothly. Share the process,
-            system, portal, app, or customer experience you want to build.
+            Tell Jacquot Digital Solutions what your business needs to run more smoothly. Share
+            the process, system, portal, app, or customer experience you want to build.
           </SectionHeader>
           <div className="contact-details" aria-label="Business details">
             <p>
-              <strong>JDS Studio</strong>
-              <span>Jacquot Digital Solutions</span>
+              <strong>Jacquot Digital Solutions</strong>
+              <span>Custom software for small businesses</span>
             </p>
             <p>
               <strong>Location</strong>

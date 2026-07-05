@@ -10,40 +10,40 @@ export const services = [
   {
     title: 'Custom Business Software',
     description:
-      'Purpose-built systems for quoting, production, scheduling, operations, reporting, and the internal workflows that keep your business moving.',
+      'Purpose-built software for quoting, operations, production, reporting, and the daily workflows that keep your business moving.',
   },
   {
     title: 'Websites',
     description:
-      'Fast, professional websites that explain what you do clearly, support search visibility, and connect directly to your business systems.',
+      'Fast, professional websites that explain what you do clearly, support search visibility, and connect to your business systems when needed.',
   },
   {
     title: 'Progressive Web Apps',
     description:
-      'Installable web applications that feel like native apps, work across devices, and give teams practical tools without app store friction.',
+      'Installable web applications that work across devices and give customers or staff a polished app experience without app store friction.',
   },
   {
     title: 'Mobile Apps',
     description:
-      'Focused mobile experiences for customers, staff, field teams, and owners who need key business tasks available from anywhere.',
+      'Focused mobile experiences for customers, field teams, staff, and owners who need important business tasks available from anywhere.',
   },
   {
     title: 'Customer Portals',
     description:
-      'Secure portals where customers can submit information, view orders, approve work, make payments, and reduce back-and-forth communication.',
-  },
-  {
-    title: 'Payment Integrations',
-    description:
-      'Checkout flows, invoice payments, deposits, subscriptions, and transaction workflows connected to the way your business sells.',
+      'Secure customer portals for submissions, order updates, approvals, documents, payments, and reduced back-and-forth communication.',
   },
   {
     title: 'Business Automation',
     description:
-      'Automation for repetitive admin tasks, notifications, approvals, status changes, document creation, and handoffs between tools.',
+      'Automation for repetitive admin work, status updates, notifications, approvals, handoffs, and document creation.',
   },
   {
-    title: 'Ongoing Support',
+    title: 'Payment Integration',
+    description:
+      'Checkout flows, deposits, invoice payments, subscriptions, and transaction workflows connected to the way your business sells.',
+  },
+  {
+    title: 'Support & Maintenance',
     description:
       'Reliable maintenance, improvements, monitoring, and support so your software continues to fit your business as it changes.',
   },
@@ -53,51 +53,51 @@ export const solutions = [
   {
     title: 'Production Management',
     problem:
-      'Work gets delayed when jobs are tracked through spreadsheets, texts, and memory.',
+      'Jobs slow down when production status, assignments, approvals, and deadlines are scattered across spreadsheets, messages, and memory.',
     solution:
-      'JDS Studio builds production systems that organize jobs, statuses, assignments, deadlines, and handoffs in one place.',
+      'A custom production system gives your team one clear place to manage work, track status, and keep jobs moving.',
   },
   {
     title: 'Ordering Systems',
     problem:
-      'Manual orders create duplicate entry, missed details, and slower customer response times.',
+      'Manual ordering creates duplicate entry, missing details, pricing mistakes, and slower response times.',
     solution:
-      'Custom ordering workflows can capture the right information upfront, validate choices, calculate pricing, and move orders into production.',
-  },
-  {
-    title: 'Employee Management',
-    problem:
-      'Schedules, roles, permissions, and internal updates are hard to manage when every process lives in a different tool.',
-    solution:
-      'A focused employee system can centralize team information, approvals, task ownership, and operational visibility.',
-  },
-  {
-    title: 'Customer Portals',
-    problem:
-      'Customers often need updates, files, approvals, and payment options outside regular business hours.',
-    solution:
-      'A customer portal gives them a secure place to take action while reducing phone calls and manual follow-up for your team.',
-  },
-  {
-    title: 'Event Platforms',
-    problem:
-      'Registrations, payments, guest details, schedules, and updates can become difficult to coordinate as events grow.',
-    solution:
-      'A tailored event platform can handle registration flows, attendee data, communications, and operational planning.',
+      'A tailored ordering workflow captures the right information upfront and moves orders into the next step with fewer manual checks.',
   },
   {
     title: 'Scheduling Systems',
     problem:
-      'Calendars become unreliable when availability, staff capacity, locations, and customer requests are handled separately.',
+      'Scheduling becomes unreliable when availability, staff capacity, locations, and customer requests are managed separately.',
     solution:
-      'Custom scheduling software can match bookings to real constraints and give everyone a clear view of what is happening next.',
+      'A custom scheduling system can match bookings to real constraints and give your team a dependable view of upcoming work.',
   },
   {
     title: 'Business Dashboards',
     problem:
-      'Owners need clear answers without digging through disconnected reports and exported files.',
+      'Owners need clear answers without digging through disconnected reports, exports, and outdated spreadsheets.',
     solution:
-      'Dashboards can surface sales, workload, customer activity, production status, and other key signals in a format built for decisions.',
+      'Dashboards surface sales, workload, customer activity, production status, and key signals in a format built for decisions.',
+  },
+  {
+    title: 'Employee Management',
+    problem:
+      'Staff information, roles, tasks, schedules, and approvals are difficult to manage when every process lives in a different tool.',
+    solution:
+      'A focused employee system centralizes team workflows and gives owners better visibility into internal operations.',
+  },
+  {
+    title: 'Customer Portals',
+    problem:
+      'Customers often need updates, documents, approvals, and payment options outside regular business hours.',
+    solution:
+      'A secure portal lets customers take action on their own while reducing phone calls and manual follow-up for your team.',
+  },
+  {
+    title: 'Event Platforms',
+    problem:
+      'Registrations, payments, attendee details, schedules, and updates become difficult to coordinate as events grow.',
+    solution:
+      'A tailored event platform can handle registration flows, attendee data, communications, and operational planning.',
   },
   {
     title: 'Inventory & Workflow',
@@ -115,9 +115,14 @@ export const processSteps = [
       'Understand your business model, current tools, bottlenecks, customer experience, and the workflows that matter most.',
   },
   {
+    title: 'Plan',
+    description:
+      'Define the scope, priorities, data, integrations, risks, and first version that will create the most useful business impact.',
+  },
+  {
     title: 'Design',
     description:
-      'Map the system, screens, data, integrations, and user journeys before development begins.',
+      'Map the screens, user journeys, permissions, and system structure before development begins.',
   },
   {
     title: 'Build',

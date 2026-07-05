@@ -5,8 +5,8 @@ function FeaturedProject() {
     <section id="featured-project" className="section section-shell project-section">
       <div className="project-layout reveal">
         <SectionHeader eyebrow="Featured project" title="It's On The Fridge">
-          An online platform that allows customers to design personalized refrigerator
-          magnets using their own photos before placing an order.
+          A custom online ordering platform that allows customers to create personalized
+          refrigerator magnets using their own photos before placing an order.
         </SectionHeader>
         <div className="project-panel" aria-label="Project workflow preview">
           <div className="project-toolbar">

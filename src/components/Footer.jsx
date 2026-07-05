@@ -2,7 +2,7 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div>
-        <strong>JDS Studio</strong>
+        <strong>Jacquot Digital Solutions</strong>
         <span>Walkerton, Ontario</span>
       </div>
       <p>© 2026 Jacquot Digital Solutions</p>
