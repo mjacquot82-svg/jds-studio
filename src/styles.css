@@ -1916,12 +1916,14 @@ body {
 }
 
 .nav-links {
-  transform: none;
+  transform: translateX(-36px);
 }
 
 .nav-cta {
-  min-height: 46px;
-  padding-inline: 23px;
+  min-height: 48px;
+  padding-inline: 20px;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 93, 255, 0.27);
   transform: none;
 }
 
@@ -1948,8 +1950,9 @@ body {
 
 .hero h1 {
   margin-top: 8px;
-  margin-bottom: 34px;
+  margin-bottom: 42px;
   font-size: 5.72rem;
+  line-height: 1.04;
 }
 
 .hero-subtitle {
@@ -1958,11 +1961,11 @@ body {
 }
 
 .hero-actions {
-  margin-top: 42px;
+  margin-top: 50px;
 }
 
 .hero-proof {
-  margin-top: 52px;
+  margin-top: 66px;
 }
 
 .hero-visual {
@@ -1970,13 +1973,13 @@ body {
 }
 
 .hero-visual::before {
-  bottom: -2%;
-  width: 86%;
-  height: 140px;
-  background: radial-gradient(ellipse at center, rgba(0, 114, 255, 1), rgba(0, 102, 255, 0.48) 40%, transparent 74%);
+  bottom: -4%;
+  width: 92%;
+  height: 166px;
+  background: radial-gradient(ellipse at center, rgba(0, 122, 255, 1), rgba(0, 102, 255, 0.58) 38%, rgba(0, 73, 205, 0.22) 58%, transparent 76%);
   box-shadow:
-    0 0 110px rgba(0, 102, 255, 0.95),
-    0 0 180px rgba(0, 80, 255, 0.42);
+    0 0 130px rgba(0, 102, 255, 1),
+    0 0 220px rgba(0, 80, 255, 0.5);
 }
 
 .interface-stage {
@@ -1986,38 +1989,38 @@ body {
 .device-panel,
 .phone-device {
   box-shadow:
-    0 44px 90px rgba(0, 0, 0, 0.55),
-    0 18px 38px rgba(0, 102, 255, 0.14),
+    0 54px 104px rgba(0, 0, 0, 0.62),
+    0 24px 48px rgba(0, 102, 255, 0.2),
     0 0 0 1px rgba(255, 255, 255, 0.24);
 }
 
 .dashboard-device {
   right: 176px;
   width: 640px;
-  transform: rotateX(3deg) rotateY(-8deg) rotateZ(-3deg);
+  transform: translate3d(0, -8px, 0) rotateX(3deg) rotateY(-8deg) rotateZ(-3deg);
 }
 
 .orders-device {
   top: 214px;
-  left: 0;
+  left: -12px;
   box-shadow:
-    0 42px 88px rgba(0, 0, 0, 0.62),
-    0 0 44px rgba(0, 102, 255, 0.12);
+    0 52px 104px rgba(0, 0, 0, 0.68),
+    0 0 60px rgba(0, 102, 255, 0.18);
 }
 
 .phone-device {
-  bottom: 24px;
+  bottom: 34px;
   box-shadow:
-    0 42px 80px rgba(0, 0, 0, 0.64),
-    0 0 60px rgba(0, 102, 255, 0.22);
+    0 54px 100px rgba(0, 0, 0, 0.72),
+    0 0 76px rgba(0, 102, 255, 0.32);
 }
 
 .schedule-device {
-  bottom: 58px;
-  right: 0;
+  bottom: 48px;
+  right: -12px;
   box-shadow:
-    0 44px 88px rgba(0, 0, 0, 0.58),
-    0 0 54px rgba(0, 102, 255, 0.16);
+    0 54px 108px rgba(0, 0, 0, 0.64),
+    0 0 68px rgba(0, 102, 255, 0.22);
 }
 
 .section {
