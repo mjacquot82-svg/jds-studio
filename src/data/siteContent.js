@@ -20,7 +20,7 @@ export const services = [
   {
     title: 'Progressive Web Apps',
     description:
-      'Installable web applications that work across devices and give customers or staff a polished app experience without app store friction.',
+      'Installable web applications that work across devices and give customers or staff a polished app experience without app-store friction.',
   },
   {
     title: 'Mobile Apps',

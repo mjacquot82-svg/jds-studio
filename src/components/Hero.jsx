@@ -59,7 +59,7 @@ function CustomerPortalPanel() {
       <PanelHeader title="Customer Portal" meta="Secure" />
       <div className="hero-portal-card">
         <strong>Jacquot Client Portal</strong>
-        <span>Documents, approvals and payments in one place.</span>
+        <span>Documents, approvals, and payments in one place.</span>
       </div>
       <div className="hero-check-list">
         <span>Quote approved</span>
@@ -153,7 +153,7 @@ function Hero() {
           Stop adapting your business to generic software.
           <br />
           <br />
-          Jacquot Digital Solutions builds custom software, customer portals, websites and
+          Jacquot Digital Solutions builds custom software, customer portals, websites, and
           business systems designed specifically around the way your business already works.
         </p>
         <div className="hero-actions" aria-label="Primary actions">
