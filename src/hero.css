@@ -647,12 +647,12 @@
 
 @media (max-width: 760px) {
   .hero-premium {
-    gap: 56px;
-    padding: 150px 18px 78px;
+    gap: 48px;
+    padding: 142px 18px 74px;
   }
 
   .hero-premium h1 {
-    font-size: 3.24rem;
+    font-size: clamp(2.9rem, 15vw, 3.24rem);
     line-height: 1.06;
   }
 
@@ -671,7 +671,7 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 13px;
-    margin-top: 42px;
+    margin-top: 38px;
   }
 
   .hero-premium .hero-visual {
@@ -691,7 +691,7 @@
 
   .hero-software-stage {
     display: grid;
-    gap: 14px;
+    gap: 13px;
     min-height: auto;
   }
 

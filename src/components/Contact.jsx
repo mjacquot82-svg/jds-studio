@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SectionHeader from './SectionHeader.jsx';
 
+const encodeForm = (formData) => new URLSearchParams(formData).toString();
+
 function Contact() {
+  const [formStatus, setFormStatus] = useState('idle');
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    setFormStatus('submitting');
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodeForm(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Form submission failed with status ${response.status}`);
+      }
+
+      form.reset();
+      setFormStatus('success');
+    } catch (error) {
+      console.error(error);
+      setFormStatus('error');
+    }
+  };
+
   return (
     <section id="contact" className="section section-shell contact-section">
       <div className="contact-layout">
@@ -32,9 +62,11 @@ function Contact() {
           className="contact-form reveal reveal-delay"
           name="consultation"
           method="post"
+          action="/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           aria-label="Consultation request form"
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="consultation" />
           <p className="hidden-field">
@@ -57,8 +89,22 @@ function Contact() {
             <label htmlFor="project">What do you want to build or improve?</label>
             <textarea id="project" name="project" rows="6" required></textarea>
           </div>
-          <button className="button button-primary form-button" type="submit">
-            Send Consultation Request
+          {formStatus === 'success' && (
+            <p className="form-message form-message-success" role="status">
+              Thank you. Your consultation request has been sent.
+            </p>
+          )}
+          {formStatus === 'error' && (
+            <p className="form-message form-message-error" role="alert">
+              Something went wrong. Please try again or email Jacquot Digital Solutions directly.
+            </p>
+          )}
+          <button
+            className="button button-primary form-button"
+            type="submit"
+            disabled={formStatus === 'submitting'}
+          >
+            {formStatus === 'submitting' ? 'Sending...' : 'Send Consultation Request'}
           </button>
         </form>
       </div>
