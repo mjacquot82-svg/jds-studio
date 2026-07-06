@@ -1427,6 +1427,10 @@ h1 {
   padding-bottom: 120px;
 }
 
+.contact-copy {
+  padding-left: clamp(44px, 5vw, 96px);
+}
+
 .contact-details {
   display: grid;
   gap: 14px;
@@ -1593,6 +1597,10 @@ h1 {
   .about-layout,
   .contact-layout {
     grid-template-columns: 1fr;
+  }
+
+  .contact-copy {
+    padding-left: 0;
   }
 
   .hero {
