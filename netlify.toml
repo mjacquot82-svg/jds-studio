@@ -1,11 +1,11 @@
 [[redirects]]
   from = "/homecoming"
-  to = "https://walkertonhomecoming.netlify.app/homecoming"
+  to = "https://walkertonhomecoming.netlify.app"
   status = 200
   force = true
 
 [[redirects]]
   from = "/homecoming/*"
-  to = "https://walkertonhomecoming.netlify.app/homecoming/:splat"
+  to = "https://walkertonhomecoming.netlify.app/:splat"
   status = 200
   force = true
