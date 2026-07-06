@@ -2797,9 +2797,27 @@ body {
   max-width: 780px;
 }
 
+.event-app-copy {
+  display: grid;
+  gap: 28px;
+  align-content: center;
+}
+
+.event-app-copy > p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.74;
+}
+
+.event-app-copy .button {
+  justify-self: start;
+}
+
 .event-app-layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.78fr) minmax(420px, 1fr);
+  grid-template-columns: minmax(0, 0.72fr) minmax(500px, 1fr);
   gap: clamp(44px, 6vw, 84px);
   align-items: center;
 }
@@ -2823,6 +2841,48 @@ body {
   inset: 0;
   background: radial-gradient(circle at 18% 0%, rgba(0, 108, 255, 0.13), transparent 18rem);
   pointer-events: none;
+}
+
+.event-app-preview {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 26px;
+}
+
+.event-app-device {
+  min-height: 620px;
+  overflow: visible;
+}
+
+.event-app-device::before {
+  right: 3%;
+  bottom: 8%;
+  left: 3%;
+  height: 150px;
+  opacity: 0.46;
+  filter: blur(22px);
+}
+
+.event-app-device .project-phone-shell {
+  inset: 11% 6% 12% auto;
+  width: min(310px, 42vw);
+}
+
+.event-app-device .project-phone {
+  width: min(335px, 42vw);
+}
+
+.event-app-device .project-phone-screen {
+  height: 580px;
+  min-height: 520px;
+}
+
+.event-app-device .project-app-caption {
+  right: auto;
+  bottom: 42px;
+  left: 0;
+  width: min(270px, 34vw);
 }
 
 .event-capability-list {
@@ -3163,6 +3223,14 @@ body {
   }
 
   .project-app-caption {
+    width: 100%;
+  }
+
+  .event-app-device .project-phone {
+    width: min(310px, calc(100vw - 64px));
+  }
+
+  .event-app-device .project-app-caption {
     width: 100%;
   }
 
