@@ -6,9 +6,12 @@ function Contact() {
     <section id="contact" className="section section-shell contact-section">
       <div className="contact-layout">
         <div className="contact-copy reveal">
-          <SectionHeader eyebrow="Contact" title="Start with the workflow you want to improve">
-            Tell Jacquot Digital Solutions what your business needs to run more smoothly. Share
-            the process, system, portal, app, or customer experience you want to build.
+          <SectionHeader
+            eyebrow="Contact"
+            title="Ready to Build Software Around Your Workflow?"
+          >
+            Let&apos;s discuss your business, understand your workflow, and explore how custom
+            software can save time, reduce repetitive work, and support your growth.
           </SectionHeader>
           <div className="contact-details" aria-label="Business details">
             <p>

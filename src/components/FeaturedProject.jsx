@@ -23,6 +23,10 @@ function FeaturedProject() {
               <span>Place order</span>
             </div>
           </div>
+          <div className="project-preview-footer">
+            <strong>Customer ordering workflow</strong>
+            <span>Photo upload, magnet preview, checkout, and order tracking.</span>
+          </div>
           <div className="project-stats">
             <span>Personalized design</span>
             <span>Customer checkout</span>

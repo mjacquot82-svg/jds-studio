@@ -7,7 +7,7 @@ function About() {
     <section id="about" className="section section-shell about-section">
       <div className="about-layout">
         <div className="about-copy reveal">
-          <SectionHeader eyebrow="About" title="Built by Marc Jacquot in Walkerton, Ontario">
+          <SectionHeader eyebrow="About Marc" title="Built by Marc Jacquot in Walkerton, Ontario">
             Jacquot Digital Solutions is owned by Marc Jacquot and focused on custom software
             for small businesses that need systems built around the way they actually operate.
           </SectionHeader>
@@ -18,16 +18,22 @@ function About() {
             decisions that already drive the business.
           </p>
         </div>
-        <div className="process-list reveal reveal-delay" aria-label="Jacquot Digital Solutions process">
-          {processSteps.map((step, index) => (
-            <article key={step.title} className="process-step">
-              <span>{String(index + 1).padStart(2, '0')}</span>
-              <div>
-                <h3>{step.title}</h3>
-                <p>{step.description}</p>
-              </div>
-            </article>
-          ))}
+        <div className="process-column reveal reveal-delay">
+          <div className="process-column-header">
+            <p className="eyebrow">Our Process</p>
+            <h2>From workflow to working software.</h2>
+          </div>
+          <div className="process-list" aria-label="Jacquot Digital Solutions process">
+            {processSteps.map((step, index) => (
+              <article key={step.title} className="process-step">
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <div>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
