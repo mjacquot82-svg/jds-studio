@@ -10,8 +10,8 @@ function Contact() {
             eyebrow="Contact"
             title="Ready to Build Software Around Your Workflow?"
           >
-            Let&apos;s discuss your business, understand your workflow, and explore how custom
-            software can save time, reduce repetitive work, and support your growth.
+            Let&apos;s talk about your business, understand how you work today, and explore
+            whether custom software can help simplify your operations.
           </SectionHeader>
           <div className="contact-details" aria-label="Business details">
             <p>

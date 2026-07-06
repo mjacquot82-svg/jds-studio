@@ -8,20 +8,19 @@ function About() {
       <div className="about-layout">
         <div className="about-copy reveal">
           <SectionHeader eyebrow="About Marc" title="Built by Marc Jacquot in Walkerton, Ontario">
-            Jacquot Digital Solutions is owned by Marc Jacquot and focused on custom software
-            for small businesses that need systems built around the way they actually operate.
+            I don&apos;t believe businesses should have to change the way they work to fit
+            software.
           </SectionHeader>
           <p>
-            Every business is unique. Off-the-shelf software often forces teams to change their
-            workflow to fit the tool. Jacquot Digital Solutions starts with the client&apos;s existing
-            process, then designs software around the workflow, customers, staff, approvals, and
-            decisions that already drive the business.
+            I believe software should be designed around the way businesses already work. Every
+            business is different. That&apos;s why I take the time to understand your workflow
+            before building a solution.
           </p>
         </div>
         <div className="process-column reveal reveal-delay">
           <div className="process-column-header">
             <p className="eyebrow">Our Process</p>
-            <h2>From workflow to working software.</h2>
+            <h2>Understand the problem before building the solution.</h2>
           </div>
           <div className="process-list" aria-label="Jacquot Digital Solutions process">
             {processSteps.map((step, index) => (

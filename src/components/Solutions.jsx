@@ -3,46 +3,46 @@ import SectionHeader from './SectionHeader.jsx';
 
 const problemCards = [
   {
-    title: 'Production Management',
+    title: 'Customers Need Updates',
     problem:
-      'Jobs slow down when production status, assignments, approvals, and deadlines are scattered.',
+      'Customers often call or message because they are not sure what is happening next.',
     solution:
-      'A custom production system gives your team one clear place to manage work, track status, and keep jobs moving.',
+      'Customer portals, notifications, and clear status updates can help customers stay informed without extra back-and-forth.',
   },
   {
-    title: 'Scheduling',
+    title: 'Orders Are Hard to Manage',
     problem:
-      'Scheduling becomes unreliable when availability, staff capacity, locations, and customer requests are managed separately.',
+      'Orders can become difficult to follow when details arrive through emails, messages, forms, and phone calls.',
     solution:
-      'A custom scheduling system can match bookings to real constraints and give your team a dependable view of upcoming work.',
+      'A focused order workflow can collect the right details upfront and make each order easier to review and manage.',
   },
   {
-    title: 'Customer Portals',
+    title: 'Manual Work Takes Too Much Time',
     problem:
-      'Customers often need updates, documents, approvals, and payment options outside regular business hours.',
+      'Repetitive admin tasks take time away from serving customers and running the business.',
     solution:
-      'A secure portal lets customers take action on their own while reducing phone calls and manual follow-up for your team.',
+      'Workflow automation can reduce repeated steps while keeping your existing way of working intact.',
   },
   {
-    title: 'Business Dashboards',
+    title: 'Business Information Is Scattered',
     problem:
-      'Owners need clear answers without digging through disconnected reports, exports, and outdated spreadsheets.',
+      'Important information is harder to use when it is spread across different tools, files, and conversations.',
     solution:
-      'Dashboards surface sales, workload, customer activity, production status, and key signals in a format built for decisions.',
+      'Dashboards and reporting can give business owners a clearer view of daily activity and key decisions.',
   },
   {
-    title: 'Inventory',
+    title: 'Customers Want Convenience',
     problem:
-      'Inventory issues often appear too late, after a job is already delayed or a customer is already waiting.',
+      'Customers expect simple ways to submit information, place orders, and check progress online.',
     solution:
-      'Integrated workflow tools can connect inventory levels, job requirements, purchasing, and status tracking before problems compound.',
+      'Online ordering and self-service tools can make the customer experience easier while reducing manual follow-up.',
   },
   {
-    title: 'Automation',
+    title: 'Your Current Tools Do Not Fit',
     problem:
-      'Repetitive admin work, status updates, notifications, approvals, handoffs, and documents consume valuable time.',
+      'Generic software can force your team to work around the tool instead of supporting the way your business already runs.',
     solution:
-      'Automation moves routine tasks through the right steps so your team can spend more time on the work that matters.',
+      'Custom software can be shaped around your workflow so the system supports the business instead of getting in the way.',
   },
 ];
 
@@ -53,8 +53,8 @@ function Solutions() {
         eyebrow="Solutions"
         title="Problems We Solve"
       >
-        Custom software helps when important work is slowed down by disconnected tools,
-        repeated tasks, and information that is hard to find.
+        Jacquot Digital Solutions looks for the business problem first, then explores whether
+        custom software can make the work simpler, clearer, or easier to manage.
       </SectionHeader>
       <div className="problem-card-list">
         {problemCards.map((card) => (

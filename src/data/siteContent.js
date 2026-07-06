@@ -8,103 +8,79 @@ export const navItems = [
 
 export const services = [
   {
-    title: 'Custom Business Software',
+    title: 'Customer Communication',
     description:
-      'Purpose-built software for quoting, operations, production, reporting, and the daily workflows that keep your business moving.',
+      'Help customers stay informed with portals, notifications, and self-service tools.',
   },
   {
-    title: 'Websites',
+    title: 'Order Management',
     description:
-      'Fast, professional websites that explain what you do clearly, support search visibility, and connect to your business systems when needed.',
+      'Simplify the way orders are submitted, tracked, and managed.',
   },
   {
-    title: 'Progressive Web Apps',
+    title: 'Workflow Automation',
     description:
-      'Installable web applications that work across devices and give customers or staff a polished app experience without app-store friction.',
+      'Reduce repetitive manual work with software designed around your existing workflow.',
   },
   {
-    title: 'Mobile Apps',
+    title: 'Business Visibility',
     description:
-      'Focused mobile experiences for customers, field teams, staff, and owners who need important business tasks available from anywhere.',
+      'Give business owners a clearer view of daily operations through dashboards and reporting.',
+  },
+  {
+    title: 'Online Ordering',
+    description:
+      'Create simple online ordering experiences that improve customer convenience.',
   },
   {
     title: 'Customer Portals',
     description:
-      'Secure customer portals for submissions, order updates, approvals, documents, payments, and reduced back-and-forth communication.',
-  },
-  {
-    title: 'Business Automation',
-    description:
-      'Automation for repetitive admin work, status updates, notifications, approvals, handoffs, and document creation.',
-  },
-  {
-    title: 'Payment Integration',
-    description:
-      'Checkout flows, deposits, invoice payments, subscriptions, and transaction workflows connected to the way your business sells.',
-  },
-  {
-    title: 'Support & Maintenance',
-    description:
-      'Reliable maintenance, improvements, monitoring, and support so your software continues to fit your business as it changes.',
+      'Provide secure spaces where customers can submit information, review progress, and stay connected.',
   },
 ];
 
 export const solutions = [
   {
-    title: 'Production Management',
+    title: 'Customers Need Updates',
     problem:
-      'Jobs slow down when production status, assignments, approvals, and deadlines are scattered across spreadsheets, messages, and memory.',
+      'Customers often call or message because they are not sure what is happening next.',
     solution:
-      'A custom production system gives your team one clear place to manage work, track status, and keep jobs moving.',
+      'Customer portals, notifications, and clear status updates can help customers stay informed without extra back-and-forth.',
   },
   {
-    title: 'Ordering Systems',
+    title: 'Orders Are Hard to Manage',
     problem:
-      'Manual ordering creates duplicate entry, missing details, pricing mistakes, and slower response times.',
+      'Orders can become difficult to follow when details arrive through emails, messages, forms, and phone calls.',
     solution:
-      'A tailored ordering workflow captures the right information upfront and moves orders into the next step with fewer manual checks.',
+      'A focused order workflow can collect the right details upfront and make each order easier to review and manage.',
   },
   {
-    title: 'Scheduling Systems',
+    title: 'Manual Work Takes Too Much Time',
     problem:
-      'Scheduling becomes unreliable when availability, staff capacity, locations, and customer requests are managed separately.',
+      'Repetitive admin tasks take time away from serving customers and running the business.',
     solution:
-      'A custom scheduling system can match bookings to real constraints and give your team a dependable view of upcoming work.',
+      'Workflow automation can reduce repeated steps while keeping your existing way of working intact.',
   },
   {
-    title: 'Business Dashboards',
+    title: 'Business Information Is Scattered',
     problem:
-      'Owners need clear answers without digging through disconnected reports, exports, and outdated spreadsheets.',
+      'Important information is harder to use when it is spread across different tools, files, and conversations.',
     solution:
-      'Dashboards surface sales, workload, customer activity, production status, and key signals in a format built for decisions.',
+      'Dashboards and reporting can give business owners a clearer view of daily activity and key decisions.',
   },
   {
-    title: 'Employee Management',
+    title: 'Customers Want Convenience',
     problem:
-      'Staff information, roles, tasks, schedules, and approvals are difficult to manage when every process lives in a different tool.',
+      'Customers expect simple ways to submit information, place orders, and check progress online.',
     solution:
-      'A focused employee system centralizes team workflows and gives owners better visibility into internal operations.',
+      'Online ordering and self-service tools can make the customer experience easier while reducing manual follow-up.',
   },
   {
-    title: 'Customer Portals',
+    title: 'Your Current Tools Do Not Fit',
     problem:
-      'Customers often need updates, documents, approvals, and payment options outside regular business hours.',
+      'Generic software can force your team to work around the tool instead of supporting the way your business already runs.',
     solution:
-      'A secure portal lets customers take action on their own while reducing phone calls and manual follow-up for your team.',
-  },
-  {
-    title: 'Event Platforms',
-    problem:
-      'Registrations, payments, attendee details, schedules, and updates become difficult to coordinate as events grow.',
-    solution:
-      'A tailored event platform can handle registration flows, attendee data, communications, and operational planning.',
-  },
-  {
-    title: 'Inventory & Workflow',
-    problem:
-      'Inventory and workflow issues often appear too late, after a job is already delayed or a customer is already waiting.',
-    solution:
-      'Integrated workflow tools can connect inventory levels, job requirements, purchasing, and status tracking before problems compound.',
+      'Custom software can be shaped around your workflow so the system supports the business instead of getting in the way.',
   },
 ];
 
@@ -112,27 +88,27 @@ export const processSteps = [
   {
     title: 'Discover',
     description:
-      'Understand your business model, current tools, bottlenecks, customer experience, and the workflows that matter most.',
+      'Understand your business, current tools, customer experience, and the workflows that matter most.',
   },
   {
     title: 'Plan',
     description:
-      'Define the scope, priorities, data, integrations, risks, and first version that will create the most useful business impact.',
+      'Define the problem, priorities, risks, and first version that can create useful business impact.',
   },
   {
     title: 'Design',
     description:
-      'Map the screens, user journeys, permissions, and system structure before development begins.',
+      'Map how the solution should support the people, customers, and decisions involved in the workflow.',
   },
   {
     title: 'Build',
     description:
-      'Develop the software with clean implementation, responsive interfaces, secure foundations, and regular review points.',
+      'Build the solution with regular review points so it stays connected to the real business need.',
   },
   {
     title: 'Launch',
     description:
-      'Prepare the production release, test the key workflows, migrate required content or data, and support rollout.',
+      'Prepare the release, test the key workflows, and support the rollout.',
   },
   {
     title: 'Support',

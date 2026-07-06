@@ -45,7 +45,7 @@ function DashboardPanel() {
         </div>
         <div className="hero-status-list">
           <span>Quote approval</span>
-          <span>Inventory sync</span>
+          <span>Order update</span>
           <span>Customer follow-up</span>
         </div>
       </div>
@@ -70,30 +70,30 @@ function CustomerPortalPanel() {
   );
 }
 
-function SchedulingPanel() {
+function CustomerUpdatesPanel() {
   return (
-    <article className="hero-panel hero-panel-scheduling" aria-label="Scheduling interface">
-      <PanelHeader title="Scheduling" meta="Today" />
+    <article className="hero-panel hero-panel-updates" aria-label="Customer updates interface">
+      <PanelHeader title="Customer Updates" meta="Today" />
       <div className="hero-schedule-board" aria-hidden="true">
         <span>9:00</span>
-        <strong>Site Review</strong>
+        <strong>Order Received</strong>
         <span>11:30</span>
-        <strong>Install Prep</strong>
+        <strong>Proof Sent</strong>
         <span>2:00</span>
-        <strong>Client Demo</strong>
+        <strong>Customer Reply</strong>
       </div>
     </article>
   );
 }
 
-function ProductionPanel() {
+function OrderFlowPanel() {
   return (
-    <article className="hero-panel hero-panel-production" aria-label="Production workflow interface">
-      <PanelHeader title="Production" meta="On track" />
+    <article className="hero-panel hero-panel-order-flow" aria-label="Order workflow interface">
+      <PanelHeader title="Order Flow" meta="On track" />
       <div className="hero-progress-stack">
         <span style={{ '--progress': '82%' }}>Intake</span>
-        <span style={{ '--progress': '64%' }}>Build</span>
-        <span style={{ '--progress': '48%' }}>QA Review</span>
+        <span style={{ '--progress': '64%' }}>Review</span>
+        <span style={{ '--progress': '48%' }}>Follow-up</span>
       </div>
     </article>
   );
@@ -136,8 +136,8 @@ function SoftwareComposition() {
     <div className="hero-software-stage">
       <DashboardPanel />
       <CustomerPortalPanel />
-      <SchedulingPanel />
-      <ProductionPanel />
+      <CustomerUpdatesPanel />
+      <OrderFlowPanel />
       <AnalyticsPanel />
       <MobilePanel />
     </div>
