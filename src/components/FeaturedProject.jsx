@@ -8,87 +8,7 @@ const projectFeatures = [
   'Track their orders',
 ];
 
-const readyMadeDesigns = ['Family', 'Pets', 'Sports', 'Events'];
-
-function MobileAppPreview() {
-  return (
-    <div className="app-preview" aria-label="Interactive It's On The Fridge mobile ordering preview">
-      <section className="app-hero">
-        <div className="app-fridge-mark" aria-hidden="true">
-          <span></span>
-          <span></span>
-        </div>
-        <p>It&apos;s On The</p>
-        <h2>Fridge!</h2>
-        <strong>Magnets</strong>
-      </section>
-
-      <section className="app-intro-card">
-        <p>Custom fridge magnets for photos, teams, businesses, events, and more.</p>
-        <span>Custom magnets made locally by the Jacquot family.</span>
-      </section>
-
-      <section className="app-price-grid" aria-label="Magnet options">
-        <button type="button">
-          <span>Round Magnet</span>
-          <strong>$5.00</strong>
-        </button>
-        <button type="button">
-          <span>Rectangle Magnet</span>
-          <strong>$5.00</strong>
-        </button>
-      </section>
-
-      <section className="app-offer-card">
-        <span aria-hidden="true">%</span>
-        <div>
-          <strong>Special Offer</strong>
-          <p>3 for $12 | 5 for $18 | 10 for $35 | Orders over 25 - $3 each</p>
-        </div>
-      </section>
-
-      <section className="app-action-list" aria-label="Ordering actions">
-        <button type="button">
-          <strong>Create Your Own Magnet</strong>
-          <span>Upload your own photo</span>
-        </button>
-        <button type="button">
-          <strong>Shop Ready-Made Designs</strong>
-          <span>Browse pre-made magnet designs</span>
-        </button>
-      </section>
-
-      <section className="app-upload-card">
-        <div className="app-upload-icon" aria-hidden="true"></div>
-        <strong>Upload and crop your photo</strong>
-        <p>Preview the magnet before placing your order.</p>
-      </section>
-
-      <section className="app-designs">
-        <div className="app-section-heading">
-          <strong>Ready-made designs</strong>
-          <span>Browse styles</span>
-        </div>
-        <div className="app-design-grid">
-          {readyMadeDesigns.map((design) => (
-            <button type="button" key={design}>
-              <span></span>
-              <strong>{design}</strong>
-            </button>
-          ))}
-        </div>
-      </section>
-
-      <section className="app-order-card">
-        <div>
-          <strong>Order summary</strong>
-          <span>2 custom magnets</span>
-        </div>
-        <button type="button">Place order</button>
-      </section>
-    </div>
-  );
-}
+const productionAppUrl = import.meta.env.VITE_FRIDGE_APP_URL;
 
 function FeaturedProject() {
   return (
@@ -108,7 +28,12 @@ function FeaturedProject() {
               <li key={feature}>{feature}</li>
             ))}
           </ul>
-          <a className="button button-primary" href="#contact">
+          <a
+            className="button button-primary"
+            href={productionAppUrl || '#featured-project'}
+            target={productionAppUrl ? '_blank' : undefined}
+            rel={productionAppUrl ? 'noreferrer' : undefined}
+          >
             Explore the App
           </a>
         </div>
@@ -121,7 +46,19 @@ function FeaturedProject() {
             <div className="project-phone-frame">
               <span className="project-phone-camera"></span>
               <div className="project-phone-screen">
-                <MobileAppPreview />
+                {productionAppUrl ? (
+                  <iframe
+                    src={productionAppUrl}
+                    title="It's On The Fridge production mobile home screen"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                ) : (
+                  <div className="project-phone-unavailable">
+                    <strong>Production app URL required</strong>
+                    <span>Set VITE_FRIDGE_APP_URL to render the live mobile homepage here.</span>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -130,8 +67,8 @@ function FeaturedProject() {
             Scroll to explore
           </div>
           <div className="project-app-caption">
-            <strong>Interactive app experience</strong>
-            <span>Visitors can scroll inside the phone to explore the ordering flow.</span>
+            <strong>Live mobile app experience</strong>
+            <span>The phone renders the production mobile homepage inside the device frame.</span>
           </div>
         </div>
       </div>
