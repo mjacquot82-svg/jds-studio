@@ -3,28 +3,28 @@ import SectionHeader from './SectionHeader.jsx';
 
 const improvementCards = [
   {
-    title: 'Customer Communication',
-    copy: 'Help customers stay informed with portals, notifications, and self-service tools.',
-  },
-  {
-    title: 'Order Management',
-    copy: 'Simplify the way orders are submitted, tracked, and managed.',
+    title: 'Customer Portals',
+    copy: 'Give customers a secure place to submit information, review progress, and stay connected.',
   },
   {
     title: 'Workflow Automation',
     copy: 'Reduce repetitive manual work with software designed around your existing workflow.',
   },
   {
-    title: 'Business Visibility',
-    copy: 'Give business owners a clearer view of daily operations through dashboards and reporting.',
-  },
-  {
     title: 'Online Ordering',
-    copy: 'Create simple online ordering experiences that improve customer convenience.',
+    copy: 'Create simple ordering experiences that help customers place orders with less back-and-forth.',
   },
   {
-    title: 'Customer Portals',
-    copy: 'Provide secure spaces where customers can submit information, review progress, and stay connected.',
+    title: 'Business Visibility',
+    copy: 'Give business owners a clearer view of daily activity through dashboards and reporting.',
+  },
+  {
+    title: 'Progressive Web Apps',
+    copy: 'Build mobile-friendly web apps that customers can use easily from their phones.',
+  },
+  {
+    title: 'Custom Business Software',
+    copy: 'Create practical business tools around the way your team and customers already work.',
   },
 ];
 
@@ -35,8 +35,8 @@ function Services() {
         eyebrow="Business improvement"
         title="What Can We Help You Improve?"
       >
-        Custom software is useful when it solves a real business problem. The goal is to
-        make daily work clearer, simpler, and easier to manage.
+        Jacquot Digital Solutions builds practical tools around real business workflows,
+        customer experiences, and order processes.
       </SectionHeader>
       <div className="education-grid">
         {improvementCards.map((card, index) => (
