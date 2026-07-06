@@ -2589,7 +2589,7 @@ body {
   position: absolute;
   inset: 11% 7% 9% auto;
   z-index: -1;
-  width: min(360px, 42vw);
+  width: min(410px, 42vw);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 48px;
   background:
@@ -2625,8 +2625,8 @@ body {
 .project-phone {
   position: relative;
   z-index: 4;
-  width: min(390px, 45vw);
-  padding: 10px;
+  width: min(450px, 45vw);
+  padding: 8px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 48px;
   background:
@@ -2663,7 +2663,7 @@ body {
 .project-phone-frame {
   position: relative;
   overflow: hidden;
-  padding: 13px;
+  padding: 10px;
   background: #05070a;
   border-radius: 38px;
 }
@@ -2864,20 +2864,6 @@ body {
   filter: blur(22px);
 }
 
-.event-app-device .project-phone-shell {
-  inset: 11% 6% 12% auto;
-  width: min(310px, 42vw);
-}
-
-.event-app-device .project-phone {
-  width: min(335px, 42vw);
-}
-
-.event-app-device .project-phone-screen {
-  height: 580px;
-  min-height: 520px;
-}
-
 .event-app-device .project-app-caption {
   right: auto;
   bottom: 42px;
@@ -3056,7 +3042,7 @@ body {
   }
 
   .project-phone {
-    width: min(360px, 52vw);
+    width: min(450px, 72vw);
   }
 
   .project-phone-screen {
@@ -3065,7 +3051,7 @@ body {
   }
 
   .project-phone-shell {
-    width: min(330px, 48vw);
+    width: min(410px, 66vw);
   }
 
   .project-app-caption {
@@ -3212,7 +3198,7 @@ body {
 
   .project-phone {
     justify-self: center;
-    width: min(310px, calc(100vw - 64px));
+    width: min(430px, 100%);
     animation: none;
   }
 
@@ -3224,10 +3210,6 @@ body {
 
   .project-app-caption {
     width: 100%;
-  }
-
-  .event-app-device .project-phone {
-    width: min(310px, calc(100vw - 64px));
   }
 
   .event-app-device .project-app-caption {
