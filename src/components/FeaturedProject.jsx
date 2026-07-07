@@ -8,7 +8,7 @@ const projectFeatures = [
   'Track their orders',
 ];
 
-const productionAppUrl = import.meta.env.VITE_FRIDGE_APP_URL || 'https://itsonthefridge.appthat.ca';
+const productionAppUrl = import.meta.env.VITE_FRIDGE_APP_URL || 'https://itsonthefridge.jdsstudio.ca';
 
 function FeaturedProject() {
   return (
