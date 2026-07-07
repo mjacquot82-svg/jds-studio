@@ -2,10 +2,10 @@ import React from 'react';
 
 const projectFeatures = [
   'Upload their own photos',
+  'Choose from pre-designed collections',
   'Choose magnet shapes and sizes',
-  'Crop and preview images',
+  'Preview designs before ordering',
   'Place orders online',
-  'Track their orders',
 ];
 
 const productionAppUrl = import.meta.env.VITE_FRIDGE_APP_URL || 'https://itsonthefridge.jdsstudio.ca';
@@ -16,12 +16,12 @@ function FeaturedProject() {
       <div className="project-showcase reveal">
         <div className="project-copy">
           <p className="eyebrow">Featured Project</p>
-          <h2>It&apos;s On The Fridge</h2>
+          <h2>It&apos;s On The Fridge!</h2>
           <p className="project-subtitle">Custom fridge magnets made simple.</p>
           <p>
-            Customers can upload their own photos, choose magnet shapes and sizes, crop and
-            preview images, place orders online, and track their orders through an intuitive
-            Progressive Web App.
+            Customers can upload their own photos or choose from a growing collection of
+            professionally designed magnets, select shapes and sizes, preview their design, and
+            place orders directly through an intuitive Progressive Web App.
           </p>
           <ul className="project-feature-list" aria-label="It's On The Fridge features">
             {projectFeatures.map((feature) => (
