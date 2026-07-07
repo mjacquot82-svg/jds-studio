@@ -10,7 +10,7 @@ const eventCapabilities = [
 ];
 
 const homeComingAppUrl =
-  import.meta.env.VITE_HOME_COMING_APP_URL || 'https://walkertonhomecoming.netlify.app';
+  import.meta.env.VITE_HOME_COMING_APP_URL || 'https://walkertonhomecoming.jdsstudio.ca';
 const homeComingPreviewUrl = import.meta.env.VITE_HOME_COMING_PREVIEW_URL || homeComingAppUrl;
 
 function Solutions() {
