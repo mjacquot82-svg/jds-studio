@@ -8,7 +8,10 @@ const json = (statusCode, body) => ({
 
 const clean = (value) => String(value || '').trim();
 
-const requiredEnv = ['RESEND_API_KEY', 'RESEND_FROM_EMAIL', 'CONTACT_TO_EMAIL'];
+const defaultFromEmail = 'Jacquot Digital Solutions <contact@jdsstudio.ca>';
+const defaultToEmail = 'contact@jdsstudio.ca';
+
+const requiredEnv = ['RESEND_API_KEY'];
 
 export const handler = async (event) => {
   if (event.httpMethod !== 'POST') {
@@ -51,6 +54,8 @@ export const handler = async (event) => {
 
   const subject = `New consultation request from ${name}`;
   const businessLine = business || 'Not provided';
+  const fromEmail = clean(process.env.RESEND_FROM_EMAIL) || defaultFromEmail;
+  const toEmail = clean(process.env.CONTACT_TO_EMAIL) || defaultToEmail;
 
   const response = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -59,8 +64,8 @@ export const handler = async (event) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: process.env.RESEND_FROM_EMAIL,
-      to: [process.env.CONTACT_TO_EMAIL],
+      from: fromEmail,
+      to: [toEmail],
       reply_to: email,
       subject,
       text: [
