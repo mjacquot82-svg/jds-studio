@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import SectionHeader from './SectionHeader.jsx';
 
-const encodeForm = (formData) => new URLSearchParams(formData).toString();
-
 function Contact() {
   const [formStatus, setFormStatus] = useState('idle');
 
@@ -14,10 +12,10 @@ function Contact() {
     setFormStatus('submitting');
 
     try {
-      const response = await fetch('/', {
+      const response = await fetch('/.netlify/functions/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encodeForm(formData),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(formData)),
       });
 
       if (!response.ok) {
@@ -62,7 +60,7 @@ function Contact() {
           className="contact-form reveal reveal-delay"
           name="consultation"
           method="post"
-          action="/"
+          action="/.netlify/functions/contact"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           aria-label="Consultation request form"
