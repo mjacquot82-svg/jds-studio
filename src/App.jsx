@@ -7,8 +7,20 @@ import FeaturedProject from './components/FeaturedProject.jsx';
 import About from './components/About.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
+import Eula from './pages/Eula.jsx';
 
 function App() {
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+
+  if (path === '/privacy') {
+    return <PrivacyPolicy />;
+  }
+
+  if (path === '/eula') {
+    return <Eula />;
+  }
+
   return (
     <>
       <Header />
