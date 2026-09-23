@@ -1,79 +1,51 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Solutions from './Solutions.jsx';
+import ProjectCard from './ProjectCard.jsx';
+import { projects, developmentProjects } from '../data/portfolio.js';
 
-const projectFeatures = [
-  'Upload their own photos',
-  'Choose from pre-designed collections',
-  'Choose magnet shapes and sizes',
-  'Preview designs before ordering',
-  'Place orders online',
-];
+export default function FeaturedProject() {
+  useEffect(() => {
+    const revealCaseStudy = () => {
+      const target = document.getElementById(window.location.hash.slice(1));
+      if (!target?.matches('details')) return;
+      target.open = true;
+      let parent = target.parentElement?.closest('details');
+      while (parent) {
+        parent.open = true;
+        parent = parent.parentElement?.closest('details');
+      }
+      target.scrollIntoView({ block: 'start', behavior: 'instant' });
+    };
+    revealCaseStudy();
+    window.addEventListener('hashchange', revealCaseStudy);
+    return () => window.removeEventListener('hashchange', revealCaseStudy);
+  }, []);
 
-const productionAppUrl = import.meta.env.VITE_FRIDGE_APP_URL || 'https://itsonthefridge.jdsstudio.ca';
-
-function FeaturedProject() {
-  return (
-    <section id="featured-project" className="section section-shell project-section">
-      <div className="project-showcase reveal">
-        <div className="project-copy">
-          <p className="eyebrow">Featured Project</p>
-          <h2>It&apos;s On The Fridge!</h2>
-          <p className="project-subtitle">Custom fridge magnets made simple.</p>
-          <p>
-            Customers can upload their own photos or choose from a growing collection of
-            professionally designed magnets, select shapes and sizes, preview their design, and
-            place orders directly through an intuitive Progressive Web App.
-          </p>
-          <ul className="project-feature-list" aria-label="It's On The Fridge features">
-            {projectFeatures.map((feature) => (
-              <li key={feature}>{feature}</li>
-            ))}
-          </ul>
-          <a
-            className="button button-primary"
-            href={productionAppUrl || '#featured-project'}
-            target={productionAppUrl ? '_blank' : undefined}
-            rel={productionAppUrl ? 'noreferrer' : undefined}
-          >
-            Explore the App
-          </a>
-        </div>
-        <div className="project-device-stage" aria-label="Interactive It's On The Fridge application preview">
-          <div className="project-phone-shell" aria-hidden="true">
-            <span></span>
-            <span></span>
+  return <section id="work" className="section section-shell work-section">
+    <div className="work-heading">
+      <div><p className="eyebrow">A few practical examples</p><h2>Things I’ve Built<span className="accent">.</span></h2></div>
+      <p>Different businesses. Real problems.<br />Practical solutions.</p>
+    </div>
+    <div className="project-grid primary-project-grid">
+      {projects.map((project, index) => <ProjectCard key={project.id} project={project} anchor={index === 0} />)}
+    </div>
+    <section className="development-work" aria-labelledby="development-heading">
+      <p className="eyebrow">Work in progress</p>
+      <h3 id="development-heading">In Development</h3>
+      <div className="project-grid development-grid">
+        {developmentProjects.map(project => <article className="project-card development-card" key={project.id}>
+          <div className="project-body">
+            <p className="eyebrow">{project.category}</p>
+            <span className="project-status project-status--development">In Development</span>
+            <h4>{project.title}</h4>
+            <p>{project.description}</p>
           </div>
-          <div className="project-phone project-phone-primary">
-            <div className="project-phone-frame">
-              <span className="project-phone-camera"></span>
-              <div className="project-phone-screen">
-                {productionAppUrl ? (
-                  <iframe
-                    src={productionAppUrl}
-                    title="It's On The Fridge production mobile home screen"
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                ) : (
-                  <div className="project-phone-unavailable">
-                    <strong>Production app URL required</strong>
-                    <span>Set VITE_FRIDGE_APP_URL to render the live mobile homepage here.</span>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-          <div className="project-scroll-hint" aria-hidden="true">
-            <span></span>
-            Scroll to explore
-          </div>
-          <div className="project-app-caption">
-            <strong>Live mobile app experience</strong>
-            <span>The phone renders the production mobile homepage inside the device frame.</span>
-          </div>
-        </div>
+        </article>)}
       </div>
     </section>
-  );
+    <details id="solutions" className="additional-work">
+      <summary><span>More work <span className="more-work-name">/ Completed work · Walkerton Homecoming</span></span><span aria-hidden="true">+</span></summary>
+      <Solutions />
+    </details>
+  </section>;
 }
-
-export default FeaturedProject;

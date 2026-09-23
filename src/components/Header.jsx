@@ -1,37 +1,13 @@
 import React from 'react';
-
-const heroNavItems = [
-  { label: 'Solutions', href: '#solutions' },
-  { label: 'Process', href: '#about' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
-];
-
-function Header() {
-  return (
-    <header className="site-header" aria-label="Primary navigation">
-      <a className="brand" href="#home" aria-label="Jacquot Digital Solutions home">
-        <img
-          className="brand-logo"
-          src="/assets/jdsbanner.png"
-          alt="Jacquot Digital Solutions"
-          width="1536"
-          height="1024"
-        />
-        <span className="brand-tagline">Custom Software. Real Solutions.</span>
-      </a>
-      <nav className="nav-links" aria-label="Main menu">
-        {heroNavItems.map((item) => (
-          <a key={item.href} href={item.href}>
-            {item.label}
-          </a>
-        ))}
-      </nav>
-      <a className="nav-cta" href="#contact">
-        Book a Consultation
-      </a>
-    </header>
-  );
+import { navItems } from '../data/siteContent.js';
+export function Brand() {
+  return <><span className="lettermark">JDS<span aria-hidden="true">.</span></span><span className="brand-name">Jacquot<br />Digital Solutions</span></>;
 }
-
-export default Header;
+export default function Header() {
+  return <header className="site-header section-shell">
+    <a className="skip-link" href="#main-content">Skip to content</a>
+    <a className="brand" href="/#home" aria-label="Jacquot Digital Solutions home"><Brand /></a>
+    <nav className="nav-links" aria-label="Main menu">{navItems.map(item => <a key={item.href} href={item.href}>{item.label}</a>)}</nav>
+    <a className="button button-primary nav-cta" href="#contact">Let’s Talk <span aria-hidden="true">↗</span></a>
+  </header>;
+}

@@ -1,27 +1,23 @@
 import React, { useState } from 'react';
 import SectionHeader from './SectionHeader.jsx';
-
 function Contact() {
   const [formStatus, setFormStatus] = useState('idle');
-
-  const handleSubmit = async (event) => {
+  const handleSubmit = async event => {
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
-
     setFormStatus('submitting');
-
     try {
       const response = await fetch('/.netlify/functions/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(Object.fromEntries(formData)),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(formData))
       });
-
       if (!response.ok) {
         throw new Error(`Form submission failed with status ${response.status}`);
       }
-
       form.reset();
       setFormStatus('success');
     } catch (error) {
@@ -29,43 +25,28 @@ function Contact() {
       setFormStatus('error');
     }
   };
-
-  return (
-    <section id="contact" className="section section-shell contact-section">
+  return <section id="contact" className="section section-shell contact-section">
       <div className="contact-layout">
         <div className="contact-copy reveal">
-          <SectionHeader
-            eyebrow="Contact"
-            title="Ready to Build Software Around Your Workflow?"
-          >
-            Let&apos;s talk about your business, understand how you work today, and explore
-            whether custom software can help simplify your operations.
+          <SectionHeader eyebrow="Let's talk" title="Have something you’ve been wondering if technology could fix?">
+            Tell me about it. You don&apos;t need a technical explanation or a project plan.
           </SectionHeader>
           <div className="contact-details" aria-label="Business details">
             <p>
               <strong>Jacquot Digital Solutions</strong>
-              <span>Custom software for small businesses</span>
+              <span>You’ll hear directly from Marc.</span>
             </p>
             <p>
               <strong>Location</strong>
               <span>Walkerton, Ontario, Canada</span>
             </p>
             <p>
-              <strong>Website</strong>
-              <span>jdsstudio.ca</span>
+              <strong>Prefer email?</strong>
+              <a href="mailto:contact@jdsstudio.ca">contact@jdsstudio.ca</a>
             </p>
           </div>
         </div>
-        <form
-          className="contact-form reveal reveal-delay"
-          name="consultation"
-          method="post"
-          action="/.netlify/functions/contact"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          aria-label="Consultation request form"
-          onSubmit={handleSubmit}
-        >
+        <form className="contact-form reveal reveal-delay" name="consultation" method="post" action="/.netlify/functions/contact" data-netlify="true" data-netlify-honeypot="bot-field" aria-label="Start a conversation with Marc" onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="consultation" />
           <p className="hidden-field">
             <label htmlFor="bot-field">Leave this field empty</label>
@@ -79,35 +60,23 @@ function Contact() {
             <label htmlFor="email">Email</label>
             <input id="email" name="email" type="email" autoComplete="email" required />
           </div>
+          <input type="hidden" name="business" value="" />
           <div className="form-row">
-            <label htmlFor="business">Business name</label>
-            <input id="business" name="business" type="text" autoComplete="organization" />
-          </div>
-          <div className="form-row">
-            <label htmlFor="project">What do you want to build or improve?</label>
+            <label htmlFor="project">What’s going on?</label>
             <textarea id="project" name="project" rows="6" required></textarea>
           </div>
-          {formStatus === 'success' && (
-            <p className="form-message form-message-success" role="status">
-              Thank you. Your consultation request has been sent.
-            </p>
-          )}
-          {formStatus === 'error' && (
-            <p className="form-message form-message-error" role="alert">
-              Something went wrong. Please try again or email Jacquot Digital Solutions directly.
-            </p>
-          )}
-          <button
-            className="button button-primary form-button"
-            type="submit"
-            disabled={formStatus === 'submitting'}
-          >
-            {formStatus === 'submitting' ? 'Sending...' : 'Send Consultation Request'}
+          {formStatus === 'success' && <p className="form-message form-message-success" role="status">
+              Thanks for reaching out. Your message has been sent to Marc.
+            </p>}
+          {formStatus === 'error' && <p className="form-message form-message-error" role="alert">
+              Your message couldn’t be sent. Please try again or email <a href="mailto:contact@jdsstudio.ca">contact@jdsstudio.ca</a>.
+            </p>}
+          <button className="button button-primary form-button" type="submit" disabled={formStatus === 'submitting'}>
+            {formStatus === 'submitting' ? 'Sending...' : 'Send Your Message ↗'}
           </button>
+          <p className="form-note">Your details are used to respond to your message. <a href="/privacy">Privacy policy</a></p>
         </form>
       </div>
-    </section>
-  );
+    </section>;
 }
-
 export default Contact;
