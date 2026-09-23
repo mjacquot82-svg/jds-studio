@@ -1,21 +1,5 @@
 import React from 'react';
-
-function Footer() {
-  return (
-    <footer className="site-footer">
-      <div className="footer-brand">
-        <img
-          src="/assets/jdsbanner.png"
-          alt="Jacquot Digital Solutions"
-          width="1536"
-          height="1024"
-          loading="lazy"
-        />
-        <span>Walkerton, Ontario</span>
-      </div>
-      <p>© 2026 Jacquot Digital Solutions</p>
-    </footer>
-  );
+import { Brand } from './Header.jsx';
+export default function Footer() {
+  return <footer className="site-footer section-shell"><a className="brand" href="/#home" aria-label="Jacquot Digital Solutions home"><Brand /></a><p>Built by Marc in Walkerton, Ontario.<br /><span>© 2026 Jacquot Digital Solutions</span></p><nav aria-label="Footer"><a href="/privacy">Privacy</a><a href="/eula">Terms of use</a><a href="/#contact">Let’s Talk ↗</a></nav></footer>;
 }
-
-export default Footer;

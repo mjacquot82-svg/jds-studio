@@ -1,0 +1,61 @@
+// Evidence and asset provenance are recorded in docs/portfolio-refinement.md.
+export const projects = [
+  {
+    id: 'ipm-2026',
+    liveUrl: 'https://theipm.ca',
+    liveLabel: 'View the Live App',
+    title: 'IPM 2026 Event App',
+    status: 'Live now',
+    statusType: 'live',
+    statusDescription: 'Built and currently being used for the 2026 International Plowing Match & Rural Expo.',
+    category: 'Flagship project · Event software',
+    description: 'An event application built for the 2026 International Plowing Match & Rural Expo.',
+    situation: 'At a large event, visitors need to find what’s happening, work out where to go and keep track of the things they want to see.',
+    built: 'A mobile-first attendee application that brings event information, schedules, site maps and a personal itinerary together.',
+    capabilities: ['Event schedules', 'Interactive site maps', 'Saved events and personal itinerary', 'Announcements and important event information'],
+    enables: 'Visitors can explore the programme, save events for their visit and find their way around the site from their phone.',
+    image: '/assets/projects/ipm-hero-field.webp',
+    heroLogo: '/assets/projects/ipm-hero-gemini4.webp',
+    imageAlt: 'Sunlit field from the production IPM app hero',
+    imageWidth: 1536,
+    imageHeight: 1024,
+    imageCaption: 'Production app hero · original assets stored locally',
+    mediaNote: 'The hero uses the original field image and event logo from the live IPM app. Both are stored with this case study so it remains available independently of the app.',
+  },
+  {
+    id: 'tee-co',
+    liveUrl: 'https://teeandco.jdsstudio.ca/',
+    title: 'Tee & Co',
+    status: 'Live',
+    statusType: 'live',
+    statusDescription: 'A real client apparel ordering and business operations system, currently in use.',
+    category: 'Apparel ordering · Business operations',
+    description: 'Connecting the customer’s order with the work that happens behind the scenes.',
+    situation: 'Custom apparel orders need clear product choices, order details and a way for customers and staff to follow what happens next.',
+    built: 'An apparel ordering and business operations system, with a customer storefront and portal alongside staff order-entry and production workflows.',
+    capabilities: ['Product and catalogue browsing', 'Customer order requests and order visibility', 'Staff order entry', 'Order and production workflow'],
+    enables: 'Customers can browse and submit an order request. Staff can carry the order forward through the production workflow without losing the connection to the customer’s request.',
+    image: '/assets/projects/tee-co-storefront.webp',
+    imageAlt: 'Tee & Co customer storefront showing apparel categories and sample product cards',
+    imageWidth: 1440,
+    imageHeight: 3396,
+    imageCaption: 'Actual storefront capture · sample catalogue',
+    mediaNote: 'This development capture shows sample catalogue items. Products and prices are illustrative; no customer records or staff screens are shown.',
+  },
+];
+
+// Deliberately limited to public summaries: no images, URLs or case-study content.
+export const developmentProjects = [
+  {
+    id: 'wellington-apparel',
+    title: 'Wellington Apparel Co.',
+    category: 'Apparel ordering · Business workflow',
+    description: 'A custom apparel ordering and business workflow system being built around garment choices, artwork and customer order details.',
+  },
+  {
+    id: 'freezer-fitness',
+    title: 'Freezer Fitness',
+    category: 'Fitness & wellness software',
+    description: 'A fitness and wellness project being developed to bring service booking, customer packages and appointment management together.',
+  },
+];

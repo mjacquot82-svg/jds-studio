@@ -1,76 +1,21 @@
 import React from 'react';
-import SectionHeader from './SectionHeader.jsx';
-
-const eventCapabilities = [
-  'Event schedules',
-  'Vendor directories',
-  'Interactive maps',
-  'Live updates',
-  'Mobile-friendly attendee experiences',
-];
-
-const homeComingAppUrl =
-  import.meta.env.VITE_HOME_COMING_APP_URL || 'https://walkertonhomecoming.jdsstudio.ca';
-const homeComingPreviewUrl = import.meta.env.VITE_HOME_COMING_PREVIEW_URL || homeComingAppUrl;
-
-function Solutions() {
-  return (
-    <section id="solutions" className="section section-shell event-app-section">
-      <div className="event-app-layout reveal">
-        <div className="event-app-copy">
-          <SectionHeader eyebrow="Event Applications" title="Apps Built For Events">
-            Jacquot Digital Solutions also develops custom event applications for organizers who
-            need clear, mobile-friendly ways to share information with attendees.
-          </SectionHeader>
-          <p>
-            Home Coming is a mobile-first event app built for community celebrations, helping
-            attendees find schedules, local details, maps, and updates from one clear source while
-            reducing organizer workload, repeat questions, and scattered event communication.
-          </p>
-          <a
-            className="button button-primary"
-            href={homeComingAppUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Launch Full App
-          </a>
-        </div>
-        <div className="event-app-panel" aria-label="Home Coming event application showcase">
-          <div className="event-app-preview">
-            <div className="event-app-device project-device-stage">
-              <div className="project-phone-shell" aria-hidden="true">
-                <span></span>
-                <span></span>
-              </div>
-              <div className="project-phone project-phone-primary">
-                <div className="project-phone-frame">
-                  <span className="project-phone-camera"></span>
-                  <div className="project-phone-screen">
-                    <iframe
-                      src={homeComingPreviewUrl}
-                      title="Home Coming live mobile event app"
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-              <div className="project-app-caption">
-                <strong>Live Home Coming experience</strong>
-                <span>The phone renders the production event app inside the device frame.</span>
-              </div>
-            </div>
-            <div className="event-capability-list">
-              {eventCapabilities.map((item) => (
-                <span key={item}>{item}</span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+export default function Solutions() {
+  return <article className="project-card additional-project">
+    <div className="project-art event-art">
+      <span className="art-label">Community, with a little less guesswork.</span>
+      <div className="event-paper"><span className="eyebrow">A community event companion</span><strong>Home<br />Coming<span>↗</span></strong><div className="event-topics"><span>01 / Find what’s on</span><span>02 / Find your way</span><span>03 / Stay up to date</span></div></div>
+      <span className="image-caption">Project overview illustration · not an app screenshot</span>
+    </div>
+    <div className="project-body"><p className="eyebrow">Community events · Mobile web</p><span className="project-status project-status--completed">Completed event</span><h3>Walkerton Homecoming</h3><p>Built and used for Walkerton Homecoming. The event has now concluded.</p>
+      <details id="project-walkerton-homecoming"><summary>See the Project <span className="sr-only">: Walkerton Homecoming</span><span aria-hidden="true">↗</span></summary><div className="case-study">
+        <h4>Project status — Completed event</h4><p>The app was built and used for the event, which has now taken place and concluded. This case study preserves the work and the experience it supported.</p>
+        <h4>The problem</h4><p>Attendees needed to know what was happening, where to go and where to find event updates.</p>
+        <h4>What I built</h4><p>A mobile-first event application with schedules, local information, maps and updates, designed for community celebrations.</p>
+        <h4>Useful capabilities</h4><ul><li>Event schedules</li><li>Local information and maps</li><li>Event updates</li></ul>
+        <h4>What it enabled</h4><p>Attendees had one place to look for event details, and organizers had a way to share schedules, maps and updates during the celebration.</p>
+        <p className="case-note">The illustration summarizes the project. A verified app screenshot can be added when available.</p>
+        <a className="case-permalink" href="#project-walkerton-homecoming">Link to this project</a>
+      </div></details>
+    </div>
+  </article>;
 }
-
-export default Solutions;
