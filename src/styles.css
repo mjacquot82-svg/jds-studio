@@ -1,3 +1,14 @@
+/* Lettermark font: real Arial Bold where installed (desktop look unchanged),
+   otherwise self-hosted Arimo Bold (OFL, Arial-metric-compatible) so the
+   period stays square on Android, which aliases "Arial" to Roboto. */
+@font-face {
+  font-family: 'JDS Lettermark';
+  src: local('Arial Bold'), local('Arial-BoldMT'),
+    url('/fonts/arimo-bold-lettermark.woff2') format('woff2');
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   font-family: Arial,Helvetica,sans-serif;
   color: #17382f;
@@ -113,6 +124,7 @@ section,article[id] {
   flex-shrink: 0;
 }
 .lettermark {
+  font-family: 'JDS Lettermark', Arial, Helvetica, sans-serif;
   font-size: 44px;
   letter-spacing: -5px;
   font-weight: 800;
