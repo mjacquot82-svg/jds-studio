@@ -2,13 +2,13 @@ import React from 'react';
 
 export default function ProjectCard({ project, anchor = false }) {
   return <article id={anchor ? 'featured-project' : undefined} className="project-card portfolio-project">
-    {project.image && <div className={`project-art portfolio-art ${project.id}-art`}>
+    <div className={`project-art portfolio-art ${project.id}-art`}>
       {project.heroLogo ? <div className="ipm-production-hero">
         <img className="ipm-hero-field" src={project.image} alt={project.imageAlt} width={project.imageWidth} height={project.imageHeight} loading="lazy" />
         <img className="ipm-hero-logo" src={project.heroLogo} alt="IPM 2026 International Plowing Match & Rural Expo, Bruce County" width="600" height="600" loading="lazy" />
       </div> : <img src={project.image} alt={project.imageAlt} width={project.imageWidth} height={project.imageHeight} loading="lazy" />}
       <span className="image-caption">{project.imageCaption}</span>
-    </div>}
+    </div>
     <div className="project-body">
       <p className="eyebrow">{project.category}</p>
       <span className={`project-status project-status--${project.statusType}`}>{project.status}</span>
@@ -22,12 +22,8 @@ export default function ProjectCard({ project, anchor = false }) {
           <h4>What I built</h4><p>{project.built}</p>
           <h4>Useful capabilities</h4><ul>{project.capabilities.map(item => <li key={item}>{item}</li>)}</ul>
           <h4>What it enables</h4><p>{project.enables}</p>
-          {project.mediaNote && <><h4>Project imagery</h4><p className="case-note">{project.mediaNote}</p></>}
-          {project.caseImage && <figure className="case-image">
-            <img src={project.caseImage} alt={project.caseImageAlt} width={project.caseImageWidth} height={project.caseImageHeight} loading="lazy" />
-            <figcaption className="image-caption">{project.caseImageCaption}</figcaption>
-          </figure>}
-          {(project.image || project.caseImage) && <a className="text-link" href={project.image || project.caseImage} target="_blank" rel="noreferrer">{project.id === 'ipm-2026' ? 'View the original hero background' : 'View the full screenshot'}<span className="sr-only"> (opens in a new tab)</span><span aria-hidden="true">↗</span></a>}
+          <h4>Project imagery</h4><p className="case-note">{project.mediaNote}</p>
+          {project.image && <a className="text-link" href={project.image} target="_blank" rel="noreferrer">{project.id === 'ipm-2026' ? 'View the original hero background' : 'View the full screenshot'}<span className="sr-only"> (opens in a new tab)</span><span aria-hidden="true">↗</span></a>}
           <a className="case-permalink" href={`#project-${project.id}`}>Link to this project</a>
         </div>
       </details>
