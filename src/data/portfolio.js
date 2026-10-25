@@ -68,12 +68,6 @@ export const projects = [
 // Deliberately limited to public summaries: no images, URLs or case-study content.
 export const developmentProjects = [
   {
-    id: 'wellington-apparel',
-    title: 'Wellington Apparel Co.',
-    category: 'Apparel ordering · Business workflow',
-    description: 'A custom apparel ordering and business workflow system being built around garment choices, artwork and customer order details.',
-  },
-  {
     id: 'freezer-fitness',
     title: 'Freezer Fitness',
     category: 'Fitness & wellness software',
