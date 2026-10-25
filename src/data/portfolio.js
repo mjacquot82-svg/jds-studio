@@ -42,6 +42,27 @@ export const projects = [
     imageCaption: 'Actual storefront capture · sample catalogue',
     mediaNote: 'This development capture shows sample catalogue items. Products and prices are illustrative; no customer records or staff screens are shown.',
   },
+  {
+    id: 'townsy',
+    liveUrl: 'https://townsy.ca',
+    liveLabel: 'Visit Townsy',
+    title: 'Townsy',
+    status: 'Live',
+    statusType: 'live',
+    statusDescription: 'A community events calendar for Bruce County, live now.',
+    category: 'Community events · Web platform',
+    description: 'Pick your town. See what’s going on. One calendar for events happening across Bruce County.',
+    situation: 'Local events are scattered across town websites, Facebook pages, posters and newsletters, so people miss things happening right down the road.',
+    built: 'A town-by-town events calendar that gathers listings from local sources, lets organizers submit their own events, and reviews each one before it goes live.',
+    capabilities: ['Browse by town', 'Add to calendar (Google or .ics)', 'Organizer event submissions', 'Ticket and detail links'],
+    enables: 'Residents can see what’s on in their town in one place. Organizers get a free way to reach the whole county.',
+    image: '/assets/projects/townsy-home.webp',
+    imageAlt: 'Townsy home page with the town search, upcoming event filters and event cards for Bruce County',
+    imageWidth: 1440,
+    imageHeight: 2324,
+    imageCaption: 'Actual site capture · live listings',
+    mediaNote: 'This capture of the public Townsy home page shows real community listings as they appeared at the time. No organizer or admin screens are shown.',
+  },
 ];
 
 // Deliberately limited to public summaries: no images, URLs or case-study content.
