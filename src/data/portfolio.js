@@ -56,6 +56,12 @@ export const projects = [
     built: 'A town-by-town events calendar that gathers listings from local sources, lets organizers submit their own events, and reviews each one before it goes live.',
     capabilities: ['Browse by town', 'Add to calendar (Google or .ics)', 'Organizer event submissions', 'Ticket and detail links'],
     enables: 'Residents can see what’s on in their town in one place. Organizers get a free way to reach the whole county.',
+    caseImage: '/assets/projects/townsy-home.webp',
+    caseImageAlt: 'Townsy home page with the town search, upcoming event filters and event cards for Bruce County',
+    caseImageWidth: 1440,
+    caseImageHeight: 2324,
+    caseImageCaption: 'Actual site capture · live listings',
+    mediaNote: 'This capture of the public Townsy home page shows real community listings as they appeared at the time. No organizer or admin screens are shown.',
   },
 ];
 

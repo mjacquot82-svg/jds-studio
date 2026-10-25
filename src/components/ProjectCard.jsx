@@ -23,7 +23,11 @@ export default function ProjectCard({ project, anchor = false }) {
           <h4>Useful capabilities</h4><ul>{project.capabilities.map(item => <li key={item}>{item}</li>)}</ul>
           <h4>What it enables</h4><p>{project.enables}</p>
           {project.mediaNote && <><h4>Project imagery</h4><p className="case-note">{project.mediaNote}</p></>}
-          {project.image && <a className="text-link" href={project.image} target="_blank" rel="noreferrer">{project.id === 'ipm-2026' ? 'View the original hero background' : 'View the full screenshot'}<span className="sr-only"> (opens in a new tab)</span><span aria-hidden="true">↗</span></a>}
+          {project.caseImage && <figure className="case-image">
+            <img src={project.caseImage} alt={project.caseImageAlt} width={project.caseImageWidth} height={project.caseImageHeight} loading="lazy" />
+            <figcaption className="image-caption">{project.caseImageCaption}</figcaption>
+          </figure>}
+          {(project.image || project.caseImage) && <a className="text-link" href={project.image || project.caseImage} target="_blank" rel="noreferrer">{project.id === 'ipm-2026' ? 'View the original hero background' : 'View the full screenshot'}<span className="sr-only"> (opens in a new tab)</span><span aria-hidden="true">↗</span></a>}
           <a className="case-permalink" href={`#project-${project.id}`}>Link to this project</a>
         </div>
       </details>
